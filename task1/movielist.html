@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favourite Movies</title>
+  <style>
+    /* Element Selector */
+    body {
+      font-family: Verdana, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #ACB6E5); /* Gradient */
+      color: rgb(40, 40, 40);   /* RGB */
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    h2 {
+     text-align: center;
+      color: hsl(210, 60%, 25%); /* HSL */
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    /* Class Selector */
+    .movie-list {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8); /* Transparent background */
+      border-radius: 12px;
+      width: 60%;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .movie-list li {
+      padding: 6px;
+      margin: 4px 0;
+    }
+
+    /* ID Selector (for favourite movie) */
+    #favourite {
+      font-weight: bold;
+      color: #e74c3c;
+      background-color: #fdecea;
+      border-left: 5px solid #e74c3c;
+      padding: 5px;
+    }
+
+    /* Pseudo-class Selector */
+    li:hover {
+      background-color: #dff9fb;
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+
+    /* Pseudo-element Selector: Add 🎥 before each movie */
+    .movie-list li::before {
+      content: "🎥 ";
+    }
+
+    /* Unique Pseudo-element for favourite movie */
+    #favourite::before {
+      content: "⭐ ";
+    }
+  </style>
+</head>
+<body>
+  <h2>My Top Movies 🎬</h2>
+  <ul class="movie-list">
+    <li>Inception</li>
+    <li id="favourite">Interstellar</li>
+    <li>The Dark Knight</li>
+    <li>Avengers: Endgame</li>
+    <li>Parasite</li>
+  </ul>
+</body>
+</html>

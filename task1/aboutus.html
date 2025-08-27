@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Element Selector */
+    body {
+      font-family: 'Open Sans', sans-serif; /* Body font */
+      background-color: #f0f4f8;
+      color: #212529;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif; /* Headings font */
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      background: linear-gradient(to right, #0077b6, #0096c7);
+      padding: 25px;
+      margin: 0;
+      border-radius: 0 0 15px 15px;
+    }
+
+    /* Class Selector */
+    .team-section {
+      background-color: #e3f2fd;
+      color: #0d47a1;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      border-radius: 10px;
+    }
+
+    .team-member {
+      margin: 15px 0;
+      padding: 15px;
+      border-left: 4px solid #1565c0;
+      background-color: #ffffff;
+      border-radius: 6px;
+      color: #333333;
+    }
+
+    /* ID Selector */
+    #mission {
+      background-color: #fff3cd;
+      border: 2px solid #ffeeba;
+      padding: 15px;
+      border-radius: 8px;
+      color: #795548;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    /* Attribute Selector */
+    a[target="_blank"] {
+      color: #e63946;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Pseudo-class Selector */
+    a:hover {
+      color: #2e7d32;
+      text-decoration: underline;
+    }
+
+    li:first-child {
+      font-weight: bold;
+      color: #2c3e50;
+      background-color: #d1f2eb;
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+    li:last-child {
+      color: #e76f51;
+      background-color: #fde2e2;
+      padding: 5px;
+      border-radius: 4px;
+    }
+
+    /* Pseudo-element Selector */
+    p::first-letter {
+      font-size: 200%;
+      font-weight: bold;
+      color: #ff6600;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    h1::after {
+      content: " ✨";
+      color: #ffd700;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 15px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    footer a {
+      color: #f1c40f;
+    }
+
+    footer a:hover {
+      color: #1abc9c;
+    }
+  </style>
+</head>
+<body>
+  <h1>About Us</h1>
+
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>
+      We strive to deliver the best services by focusing on innovation, customer satisfaction, and teamwork.
+    </p>
+  </section>
+
+  <section class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-member">
+      <h3>Yuvika Chaudhary</h3>
+      <p>Founder & CEO – Passionate about building innovative platforms for expression.</p>
+    </div>
+    <div class="team-member">
+      <h3>Rahul Sharma</h3>
+      <p>Lead Developer – Focused on scalable and secure web solutions.</p>
+    </div>
+    <div class="team-member">
+      <h3>Priya Mehta</h3>
+      <p>UX Designer – Dedicated to crafting simple yet powerful user experiences.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="color:#1d3557; background:#f1faee; padding:10px; border-radius:6px; width:80%; margin:auto;">
+      Our Values
+    </h2>
+    <ul style="width:80%; margin:auto; background:#f9f9f9; padding:15px; border-radius:8px; font-family:'Open Sans',sans-serif;">
+      <li>Integrity</li>
+      <li>Innovation</li>
+      <li>Customer Satisfaction</li>
+      <li>Teamwork</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Follow us on 
+      <a href="https://www.linkedin.com//in/yuvika-chaudhary-435983348/" target="_blank">LinkedIn</a> 
+      and 
+      <a href="https://github.com/yuvi194" target="_blank">GitHub</a>.
+    </p>
+  </footer>
+</body>
+</html>
