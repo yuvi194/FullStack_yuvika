@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>University Finder</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #0d1224;
+        color: #fff;
+        text-align: center;
+        padding: 30px;
+    }
+    input {
+        padding: 10px;
+        width: 250px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 18px;
+        margin-left: 10px;
+        border: none;
+        background: #3c79ff;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    button:hover {
+        background: #1d4fe0;
+        transform: scale(1.05);
+    }
+    .card {
+        background: #1c2445;
+        padding: 15px;
+        margin: 10px auto;
+        width: 70%;
+        border-radius: 8px;
+        text-align: left;
+        transition: 0.3s;
+    }
+    .card:hover {
+        background: #23305a;
+    }
+    a {
+        color: #00c8ff;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+<body>
+    <h2> University Finder by Country</h2>
+    <input type="text" id="countryInput" placeholder="Enter country (e.g., India)">
+    <button onclick="fetchUniversities()">Search</button>
+
+    <div id="result"></div>
+
+<script>
+async function fetchUniversities() {
+    const country = document.getElementById("countryInput").value.trim();
+    const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = ""; // Clear old results
+
+    if (country === "") {
+        alert("Please enter a country name!");
+        return;
+    }
+
+    const url = `http://universities.hipolabs.com/search?country=${country}`;
+
+    try {
+        resultDiv.innerHTML = "<p>Loading data...</p>";
+        const res = await fetch(url);
+        const data = await res.json();
+
+        resultDiv.innerHTML = ""; // Clear loading text
+
+        if (data.length === 0) {
+            resultDiv.innerHTML = `<p>No universities found for <b>${country}</b></p>`;
+            return;
+        }
+
+        data.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `
+                <h3>${item.name}</h3>
+                <p><strong>State/Province:</strong> ${item["state-province"] ?? "N/A"}</p>
+                <p><a href="${item.web_pages[0]}" target="_blank">🌐 Visit Website</a></p>
+            `;
+            resultDiv.appendChild(card);
+        });
+    } catch (error) {
+        resultDiv.innerHTML = "<p>Error fetching data</p>";
+        console.error(error);
+    }
+}
+</script>
+
+</body>
+</html>

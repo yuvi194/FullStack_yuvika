@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            background: black;
+        }
+
+        .space-container {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .astronaut {
+            position: absolute;
+            bottom: 10px;
+            left: 10%;
+            animation: float 4s infinite ease-in-out alternate;
+        }
+
+        .rocket {
+            position: absolute;
+            bottom: -200px;
+            left: 70%;
+            animation: launch 5s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes launch {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-500px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="space-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" class="astronaut" alt="Astronaut">
+        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995524.png" class="rocket" alt="Rocket">
+    </div>
+</body>
+</html>

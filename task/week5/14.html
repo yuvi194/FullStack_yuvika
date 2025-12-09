@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Methods Practice</title>
+</head>
+<body>
+<script>
+  let numbers = [2, 5, 8, 10, 15];
+  let squares = numbers.map(num => num * num);
+  console.log("Squares:", squares);
+  let evens = numbers.filter(num => num % 2 === 0);
+  console.log("Even Numbers:", evens);
+  let total = numbers.reduce((sum, num) => sum + num, 0);
+  console.log("Sum:", total);
+  document.write("<h3>Numbers in Array:</h3>");
+  numbers.forEach(num => {
+    document.write(num + " ");
+  });
+</script>
+</body>
+</html>

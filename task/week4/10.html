@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+         body {
+            background: #111; 
+            margin: 0;
+            padding: 20px;
+        }
+
+        nav {
+            background: #222;
+            padding: 12px 25px;
+            border-radius: 10px;
+        }
+        .nav-items {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: background 0.4s, color 0.4s, transform 0.3s;
+        }
+
+        .nav-items a:hover {
+            background: #00aaff;
+            color: black;
+            transform: scale(1.15);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

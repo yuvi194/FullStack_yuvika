@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Gallery</title>
+  <style>
+    .gallery {
+      width: 350px;
+      margin: auto;
+      text-align: center;
+    }
+    .thumbs img {
+      width: 70px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    #mainImg {
+      width: 300px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+    <div class="gallery">
+        <img id="mainImg" src="https://images.unsplash.com/photo-1534854638093-bada1813ca19?w=300" alt="Main Image">
+        <div class="thumbs" id="thumbContainer">
+            <img src="https://images.unsplash.com/photo-1581094651181-3592a5dd0bcc?w=300">
+            <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=300">
+            <img src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=300">
+            <img src="https://images.unsplash.com/photo-1473929721637-928d0f0b137e?w=300">
+        </div>
+    </div>
+
+<script>
+    const mainImg = document.getElementById("mainImg");
+    const thumbs = document.getElementById("thumbContainer");
+
+    thumbs.addEventListener("click", function (event) {
+        if (event.target.tagName === "IMG") {
+            mainImg.src = event.target.src; 
+        }
+    });
+
+</script>
+</body>
+</html>

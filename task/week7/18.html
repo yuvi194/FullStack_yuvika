@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fake API Fetch</title>
+</head>
+<body>
+
+<h2>Server Response:</h2>
+<div id="result">Waiting for data...</div>
+
+<script>
+    function getData() {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+            resolve("Data fetched from server ✔");
+            }, 2000); // 2-second delay
+        });
+    }
+    document.getElementById("result").textContent = "Fetching...";
+    getData().then(response => {
+        document.getElementById("result").textContent = response;
+    });
+</script>
+</body>
+</html>

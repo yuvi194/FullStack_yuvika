@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero {
+            padding: 3rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        main {
+            background: white;
+            padding: 3rem 0;
+            border-radius: 20px 20px 0 0;
+            margin-top: 2rem;
+        }
+
+        section {
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        section h2 {
+            color: #764ba2;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .profile-container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            border: 5px solid #667eea;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .bio-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .education-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .skill-category {
+            background: #e9ecef;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .skill-category h3 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            background: white;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            border-radius: 20px;
+            border: 1px solid #dee2e6;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h1>Yuvika Chaudhary</h1>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Software Developer & UX Designer</h1>
+            <p>Creating innovative digital experiences with a passion for clean code and user-centered design</p>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="profile">
+            <h2>About Me</h2>
+            <div class="profile-container">
+                <figure>
+                    <img src="" alt="Professional headshot of me" class="profile-image">
+                    <figcaption>Yuvika Chaudhary - Software Developer</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="bio">
+            <h2>Biography</h2>
+            <div class="bio-content">
+                <p>I am a passionate full-stack developer with over 5 years of experience in creating responsive web applications and digital solutions. My journey in technology began with a fascination for how things work, which evolved into a career dedicated to building innovative and user-friendly software.</p>
+                <p>I believe in writing clean, maintainable code and creating interfaces that are both beautiful and functional. When I'm not coding, you can find me contributing to open-source projects, attending tech meetups, or exploring new hiking trails.</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <article class="education-card">
+                    <h3>Master of Science</h3>
+                    <p>Computer Science</p>
+                    <p>Stanford University</p>
+                    <p>2020 - 2022</p>
+                </article>
+                <article class="education-card">
+                    <h3>Bachelor of Science</h3>
+                    <p>Software Engineering</p>
+                    <p>MIT</p>
+                    <p>2016 - 2020</p>
+                </article>
+                <article class="education-card">
+                    <h3>Certifications</h3>
+                    <p>AWS Certified Developer</p>
+                    <p>Google UX Design</p>
+                    <p>React Specialist</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul class="skill-list">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React.js</li>
+                        <li>Vue.js</li>
+                        <li>TypeScript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul class="skill-list">
+                        <li>Node.js</li>
+                        <li>Python (Django)</li>
+                        <li>Java (Spring)</li>
+                        <li>SQL & NoSQL</li>
+                        <li>RESTful APIs</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <ul class="skill-list">
+                        <li>Git & GitHub</li>
+                        <li>Docker</li>
+                        <li>AWS</li>
+                        <li>Figma</li>
+                        <li>Agile/Scrum</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p>📧 Email: yuvika1904@gmail.com</p>
+                <p>📱 Phone: 8218339029 </p>
+                <p>📍 Location: Mthura , Uttar Pradesh</p>
+                <p>🔗 LinkedIn: linkedin.com/in/yuvika-chaudhary-435983348/</p>
+                <p>💻 GitHub: github.com/yuvi194</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Yuvika Chaudhary. All rights reserved.</p>
+            <p>Built with semantic HTML and pure CSS</p>
+        </div>
+    </footer>
+</body>
+</html>

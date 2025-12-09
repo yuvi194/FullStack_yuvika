@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .blog-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .blog-card {
+            flex: 1;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .blog-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        @media(max-width: 768px) {
+            .blog-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="blog-container">
+            <div class="blog-card">
+                <img src="https://picsum.photos/400/200" alt="">
+                <h3>Travel Diaries</h3>
+                <p>Explore the best places around the world and share new experiences.</p>
+            </div>
+            <div class="blog-card">
+                <img src="https://picsum.photos/250/250" alt="">
+                <h3>Tech Trends</h3>
+                <p>Latest innovations in AI, gadgets, and modern technology.</p>
+            </div>
+            <div class="blog-card">
+                <img src="https://picsum.photos/300/150" alt="">
+                <h3>Healthy Life</h3>
+                <p>Improve lifestyle with fitness tips, recipes, and wellness guidance.</p>
+            </div>
+        </div>
+</body>
+</html>

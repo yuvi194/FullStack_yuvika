@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    <style>
+        .product-card {
+            width: 260px;
+            background: #fff;
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .product-card button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product-card button:hover {
+            background: #0056b3;
+        }
+        @media(max-width: 600px) {
+            .product-card {
+                width: 90%;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-card">
+        <img src="https://picsum.photos/400" alt="Product Image">
+        <h3>Stylish Headphones</h3>
+        <p>High-quality sound with noise cancellation. Best for music lovers.</p>
+        <button>Buy Now</button>
+    </div>
+</body>
+</html>

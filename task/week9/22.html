@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <style>
+        ul { 
+            list-style: none; padding: 0;
+        }
+        li.completed { 
+            text-decoration: line-through; opacity: 0.6; 
+        }
+        button { 
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Advanced To-Do List</h2>
+    <input type="text" id="todoInput" placeholder="Enter task">
+    <button onclick="addTask()">Add</button>
+    <ul id="todoList"></ul>
+</body>
+<script>
+    function addTask() {
+        const input = document.getElementById("todoInput");
+        const taskText = input.value.trim();
+        if (taskText === "") return alert("Enter a task!");
+
+        const li = document.createElement("li");
+
+        
+        const cb = document.createElement("input");
+        cb.type = "checkbox";
+        cb.addEventListener("change", () => {
+            li.classList.toggle("completed");
+        });
+
+
+        const span = document.createElement("span");
+        span.textContent = " " + taskText;
+
+        
+        const del = document.createElement("button");
+        del.textContent = "🗑";
+        del.onclick = () => li.remove();
+
+        
+        const up = document.createElement("button");
+        up.textContent = "⬆";
+        up.onclick = () => {
+            const prev = li.previousElementSibling;
+            if (prev) li.parentNode.insertBefore(li, prev);
+        };
+
+        
+        const down = document.createElement("button");
+        down.textContent = "⬇";
+        down.onclick = () => {
+            const next = li.nextElementSibling;
+            if (next) li.parentNode.insertBefore(next, li);
+        };
+
+        li.append(cb, span, up, down, del);
+        document.getElementById("todoList").append(li);
+
+        input.value = "";
+    }
+</script>
+</html>

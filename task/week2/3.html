@@ -1,0 +1,311 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TechVision Innovations</title>
+    <style>
+        /* Element Selectors with HEX colors */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50; /* HEX color */
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgb(52, 152, 219); /* RGB color */
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: hsl(0, 0%, 100%); /* HSL color */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50; /* HEX color */
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Class Selectors with RGBA colors */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 3rem 0;
+            background: rgba(255, 255, 255, 0.95); /* RGBA color */
+            margin: 2rem auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.1);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: hsl(210, 29%, 97%); /* HSL color */
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(52, 152, 219, 0.1);
+        }
+
+        .value-card {
+            background: rgb(236, 240, 241); /* RGB color */
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #3498db; /* HEX color */
+        }
+
+        /* ID Selectors with HSL colors */
+        #hero {
+            background: linear-gradient(135deg, hsl(204, 70%, 53%) 0%, hsl(204, 80%, 45%) 100%); /* HSL gradients */
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        #mission {
+            background: rgba(236, 240, 241, 0.8); /* RGBA color */
+            border-left: 5px solid #e74c3c; /* HEX color */
+        }
+
+        /* Attribute Selectors */
+        a[href^="mailto"] {
+            color: #e74c3c; /* HEX color */
+            font-weight: 600;
+        }
+
+        a[href*="linkedin"] {
+            color: #0077b5; /* HEX color */
+        }
+
+        img[alt*="team"] {
+            border-radius: 50%;
+            border: 3px solid #3498db; /* HEX color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Pseudo-class Selectors */
+        nav a:hover {
+            color: #f39c12; /* HEX color */
+            text-decoration: underline;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.2);
+            background: hsl(210, 29%, 99%); /* HSL color */
+        }
+
+        .value-card:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.9); /* RGBA color */
+        }
+
+        .value-card:nth-child(even) {
+            background: rgba(236, 240, 241, 0.8); /* RGBA color */
+        }
+
+        /* Pseudo-element Selectors */
+        .section::before {
+            content: "";
+            display: block;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #e74c3c, #f39c12);
+            margin-bottom: 2rem;
+            border-radius: 2px;
+        }
+
+        .team-member::after {
+            content: "🌟";
+            display: block;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: #f39c12; /* HEX color */
+        }
+
+        blockquote::before {
+            content: "“";
+            font-size: 3rem;
+            color: #3498db; /* HEX color */
+            position: absolute;
+            left: -1rem;
+            top: -1rem;
+        }
+
+        blockquote::after {
+            content: "”";
+            font-size: 3rem;
+            color: #3498db; /* HEX color */
+            position: absolute;
+            right: -1rem;
+            bottom: -2rem;
+        }
+
+        /* Additional styling */
+        .btn {
+            background: #3498db; /* HEX color */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #2980b9; /* HEX color */
+        }
+
+        footer {
+            background: rgb(44, 62, 80); /* RGB color */
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechVision Innovations</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#values">Values</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Transforming Tomorrow, Today</h2>
+            <p>Pioneering innovative solutions for a digital future</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="about" class="section">
+            <h2>Our Story</h2>
+            <p>Founded in 2018, TechVision Innovations has been at the forefront of digital transformation, helping businesses navigate the complex technological landscape with cutting-edge solutions.</p>
+            <p>Our journey began with a simple belief: technology should empower people, not complicate their lives. Today, we're a team of passionate innovators dedicated to creating meaningful digital experiences.</p>
+            
+            <div id="mission" class="value-card">
+                <h3>Our Mission</h3>
+                <p>To democratize technology and make innovative solutions accessible to businesses of all sizes, enabling growth and fostering digital inclusion.</p>
+            </div>
+        </section>
+
+        <section id="team" class="section">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a80956db-c578-4025-b771-d1a38a052053.png" alt="Sarah Chen - Team Lead and Senior Developer" width="150" height="150">
+                    <h3>Sarah Chen</h3>
+                    <p>CTO & Lead Developer</p>
+                    <p>10+ years in software architecture</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b48cdb4a-de8e-4403-9071-c0f87c650b7b.png" alt="Marcus Johnson - UX Design Specialist" width="150" height="150">
+                    <h3>Marcus Johnson</h3>
+                    <p>UX/UI Design Lead</p>
+                    <p>Creating intuitive user experiences</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eb6ab9a5-0c61-49b8-ac2c-57cbd8efc44a.png" alt="Emily Rodriguez - Project Manager" width="150" height="150">
+                    <h3>Emily Rodriguez</h3>
+                    <p>Project Manager</p>
+                    <p>Ensuring seamless project delivery</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="values" class="section">
+            <h2>Our Core Values</h2>
+            <div class="value-card">
+                <h3>Innovation</h3>
+                <p>We constantly push boundaries and explore new possibilities to deliver groundbreaking solutions.</p>
+            </div>
+            <div class="value-card">
+                <h3>Integrity</h3>
+                <p>We believe in transparency, honesty, and doing what's right for our clients and team.</p>
+            </div>
+            <div class="value-card">
+                <h3>Excellence</h3>
+                <p>We strive for perfection in every project, paying attention to every detail.</p>
+            </div>
+            <div class="value-card">
+                <h3>Collaboration</h3>
+                <p>We work together with our clients as partners in their success journey.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Get In Touch</h2>
+            <p>Ready to transform your business? Let's discuss how we can help you achieve your goals.</p>
+            <p>Email: <a href="mailto:hello@techvision.com">hello@techvision.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/company/techvision">TechVision Innovations</a></p>
+            <button class="btn">Schedule a Consultation</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 TechVision Innovations. All rights reserved.</p>
+            <p>Building the future, one innovation at a time.</p>
+        </div>
+    </footer>
+</body>
+</html>

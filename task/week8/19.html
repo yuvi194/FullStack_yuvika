@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAQ Toggle</title>
+  <style>
+    .faq-box {
+      width: 400px;
+      margin: 20px auto;
+      font-family: Arial;
+    }
+    .question {
+      background: #007bff;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+    .answer {
+      display: none;
+      padding: 10px;
+      border: 1px solid #007bff;
+      background: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+    <div class="faq-box">
+        <div class="question">What is jQuery?</div>
+        <div class="answer">jQuery is a JavaScript library used to simplify DOM manipulation and effects.</div>
+
+        <div class="question">Why use jQuery?</div>
+        <div class="answer">It makes animations, AJAX, and event handling easier.</div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(".question").click(function() {
+    $(this).next(".answer").slideToggle();
+  });
+</script>
+
+</body>
+</html>

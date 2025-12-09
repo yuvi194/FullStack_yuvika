@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Age Check</title>
+</head>
+<body>
+
+<script>
+  let age = prompt("Enter your age:"); 
+  if(age >= 18) {
+    alert("You are eligible to vote ✔");
+  } else {
+    alert("You are NOT eligible to vote ❌");
+  }
+  let message = (age >= 18) ? "Eligible ✔" : "Not Eligible ❌";
+  document.write("<h3>Result: " + message + "</h3>");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>To-Do List</title>
+  <style>
+    body { font-family: Arial; }
+    #todoBox { width: 300px; margin: 20px auto; }
+    ul { padding: 0; }
+    li {
+      list-style: none;
+      background: #f2f2f2;
+      margin: 5px 0;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 5px;
+    }
+    button {
+      background: red;
+      color: #fff;
+      border: none;
+      padding: 4px 7px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+    <div id="todoBox">
+        <h2>My To-Do List</h2>
+        <input type="text" id="itemInput" placeholder="Enter task">
+        <button onclick="addItem()">Add</button>
+
+        <ul id="todoList"></ul>
+    </div>
+
+<script>
+    function addItem() {
+        let input = document.getElementById("itemInput");
+        let text = input.value.trim();
+
+        if (text === "") return;
+        let li = document.createElement("li");
+        li.textContent = text;
+        let delBtn = document.createElement("button");
+        delBtn.textContent = "X";
+        delBtn.onclick = function () {
+            li.remove();
+        };
+        li.appendChild(delBtn);
+        document.getElementById("todoList").appendChild(li);
+
+        input.value = ""; 
+    }
+
+</script>
+
+</body>
+</html>

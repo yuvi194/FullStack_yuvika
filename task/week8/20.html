@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic CSS</title>
+</head>
+<body>
+
+<h2 id="title">Click the button to style me!</h2>
+<button id="styleBtn">Apply Style</button>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $("#styleBtn").click(function () {
+    $("#title").css({
+      "color": "red",
+      "font-size": "35px",
+      "background": "yellow",
+      "padding": "10px",
+      "border-radius": "10px"
+    });
+  });
+</script>
+
+</body>
+</html>
